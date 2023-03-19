@@ -119,5 +119,17 @@ input.onGesture(Gesture.LogoDown, function () {
         . . # . .
         `)
 })
+let distance = 0
 radio.setGroup(58)
 basic.showIcon(IconNames.House)
+basic.forever(function () {
+    distance = Tinybit.Ultrasonic_Car()
+    if (distance < 15) {
+        Tinybit.RGB_Car_Program().showRainbow(1, 360)
+        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Back, 80, 80)
+        Tinybit.RGB_Car_Big2(255, 0, 0)
+        music.ringTone(659)
+        music.ringTone(523)
+        basic.pause(200)
+    }
+})
