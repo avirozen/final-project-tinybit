@@ -11,7 +11,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             . . # . .
             `)
     } else if (receivedNumber == 8) {
-        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Back, 78)
+        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Back, 100, 100)
         Tinybit.RGB_Car_Big2(255, 0, 0)
         music.ringTone(659)
         music.ringTone(523)
@@ -24,8 +24,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             `)
     } else if (receivedNumber == 6) {
         music.stopAllSounds()
-        Tinybit.CarCtrl(Tinybit.CarState.Car_Right)
-        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Right, 30)
+        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Right, 70)
         basic.showLeds(`
             . . # . .
             . # . . .
@@ -35,7 +34,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             `)
     } else if (receivedNumber == 4) {
         music.stopAllSounds()
-        Tinybit.CarCtrl(Tinybit.CarState.Car_Left)
+        Tinybit.CarCtrlSpeed(Tinybit.CarState.Car_Left, 70)
         basic.showLeds(`
             . . # . .
             . . . # .
